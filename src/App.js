@@ -26,10 +26,7 @@ function App() {
 					<Route exact path="/cart" component={Cart} />
 					<Route exact path="/products" component={Products} />
 					<Route exact path="/products/:id" component={SingleProduct} />
-					<PrivateRoute exact path="/checkout">
-						<Checkout />
-					</PrivateRoute>
-
+					<PrivateRoute exact path="/checkout" component={Checkout} />
 					<Route path="/*" component={Error} />
 				</Switch>
 				<Footer />
