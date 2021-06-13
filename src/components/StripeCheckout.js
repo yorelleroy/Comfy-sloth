@@ -65,6 +65,7 @@ const CheckoutForm = () => {
 			setTimeout(() => {
 				clearCart();
 				history.push('/');
+				//changed timeout
 			}, 5000);
 		}
 	};
