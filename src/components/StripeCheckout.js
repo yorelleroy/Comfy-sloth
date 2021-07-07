@@ -66,6 +66,7 @@ const CheckoutForm = () => {
 				clearCart();
 				history.push('/');
 				//changed timeout
+				//hello
 			}, 5000);
 		}
 	};
