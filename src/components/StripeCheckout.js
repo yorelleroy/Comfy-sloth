@@ -28,6 +28,8 @@ const CheckoutForm = () => {
 	const [disabled, setDisabled] = useState(true);
 	const [clientSecret, setClientSecret] = useState('');
 
+	console.log(clientSecret);
+
 	const stripe = useStripe();
 	const elements = useElements();
 
@@ -52,9 +54,13 @@ const CheckoutForm = () => {
 	const handleSubmit = async ev => {
 		ev.preventDefault();
 		setProcessing(true);
+
 		const payload = await stripe.confirmCardPayment(clientSecret, {
-			payment_method: { card: elements.getElement(CardElement) },
+			payment_method: {
+				card: elements.getElement(CardElement),
+			},
 		});
+
 		if (payload.error) {
 			setError(`Payment failed ${payload.error.message}`);
 			setProcessing(false);
