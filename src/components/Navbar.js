@@ -62,6 +62,7 @@ const NavContainer = styled.nav`
 		img {
 			width: 175px;
 			margin-left: -15px;
+			margin-top: 15px;
 		}
 	}
 	.nav-toggle {
